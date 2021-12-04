@@ -10,14 +10,16 @@ using Newtonsoft.Json;
 
 namespace AppSix
 {
-    public static class Function1
+    public static class AppSix
     {
-        [FunctionName("Function1")]
+        [FunctionName("AppSix")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "{name}")] HttpRequest req,
             string name)
         {
-            return new OkObjectResult(name);
+            var user = new User();
+            user.Name = name;
+            return new OkObjectResult(user);
         }
     }
 }

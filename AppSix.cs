@@ -17,7 +17,11 @@ namespace AppSix
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "{name}")] HttpRequest req,
             string name)
         {
-            var user = new User();
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            User user = JsonConvert.DeserializeObject<User>(requestBody);
+            UserContext userContext = new UserContext();
+            userContext.Add(user);
+            userContext.SaveChanges();
             user.UserName = $"hello, {name}";
             return new OkObjectResult(user);
         }

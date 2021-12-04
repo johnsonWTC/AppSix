@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace FunctionApp41
+namespace AppSix
 {
     public class CrudContextFactory : IDesignTimeDbContextFactory<UserContext>
     {

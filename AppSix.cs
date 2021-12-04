@@ -18,7 +18,7 @@ namespace AppSix
             string name)
         {
             var user = new User();
-            user.Name = $"hello, {name}";
+            user.UserName = $"hello, {name}";
             return new OkObjectResult(user);
         }
     }

@@ -1,5 +1,5 @@
 ﻿
-using FunctionApp41;
+using AppSix;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using System;

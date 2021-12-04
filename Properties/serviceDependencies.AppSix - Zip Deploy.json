@@ -4,6 +4,12 @@
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Storage/storageAccounts/functionappteststor",
       "type": "storage.azure",
       "connectionId": "AzureWebJobsStorage"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/consumsion/databases/APPSix",
+      "type": "mssql.azure",
+      "connectionId": "Johnson",
+      "secretStore": "AzureAppSettings"
     }
   }
 }

@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AppSix
+namespace FunctionApp41
 {
-    class User
+   public class User
     {
-        public string Name { get; set; }
+        public int UserID { get; set; }
+        public string UserName { get; set; }    
     }
 }

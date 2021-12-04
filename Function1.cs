@@ -14,10 +14,10 @@ namespace AppSix
     {
         [FunctionName("Function1")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
-            ILogger log)
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "{name}")] HttpRequest req,
+            string name)
         {
-            return new OkObjectResult("");
+            return new OkObjectResult(name);
         }
     }
 }

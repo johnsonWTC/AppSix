@@ -15,8 +15,7 @@ namespace AppSix
         public DbSet<User> Users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=tcp:consumsion.database.windows.net,1433;Initial Catalog=APPSix;Persist Security Info=False;User ID=johnson;Password=Jamgod12345!!!!!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-        }
+       }
 
 
 

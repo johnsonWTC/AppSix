@@ -20,8 +20,19 @@ namespace AppSix
             ILogger log, ClaimsPrincipal claimsPrincipal)
         {
             var emailClaim = claimsPrincipal.Claims.FirstOrDefault(c => c.Type == "emails");
-            var email = emailClaim.Value;
+            String email;
+            if(emailClaim is null)
+            {
+                email = "no email found";
+            }
+            else
+                email = emailClaim.Value;
             return new OkObjectResult(email);
         }
+    }
+
+    public class ReturnValue
+    {
+        public string Email { get; set; }
     }
 }

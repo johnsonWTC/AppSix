@@ -7,6 +7,8 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System.Security.Claims;
+using System.Linq;
 
 namespace AppSix
 {
@@ -15,7 +17,7 @@ namespace AppSix
         [FunctionName("AppSix")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "{name}")] HttpRequest req,
-            string name)
+            string name, ClaimsPrincipal claimsPrincipal)
         {
             //    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             User user = new User();

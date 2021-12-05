@@ -16,7 +16,7 @@ namespace AppSix
     {
         [FunctionName("AppSix")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "{name}")] HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = "{AppSix}/{name}")] HttpRequest req,
             string name, ClaimsPrincipal claimsPrincipal)
         {
             //    string requestBody = await new StreamReader(req.Body).ReadToEndAsync();

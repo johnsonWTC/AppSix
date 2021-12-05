@@ -21,8 +21,6 @@ namespace AppSix
         {
             var emailClaim = claimsPrincipal.Claims.FirstOrDefault(c => c.Type == "emails");
             var email = emailClaim.Value;
-          
-
             return new OkObjectResult(email);
         }
     }
